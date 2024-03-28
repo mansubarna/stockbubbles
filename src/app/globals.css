@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body {
+  @apply text-slate-100;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.chart-holder {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 0;
+}
+
+.chart-holder>div:last-child {
+  flex-grow: 1;
+  height: 100%;
+  flex-shrink: 1;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+  text-align: center;
+}
+
+.bubble-logo-wrap {
+  position: relative;
+}
+
+.bubble-logo {
+  min-width: 41.25px;
+  height: 41.25px;
+  width: 41.25px;
+  height: auto;
+  border-radius: 50%;
+  display: flex;
+}
+
+.bubble-symbol {
+  margin-bottom: .125rem;
+  margin-top: .125rem;
+  text-transform: uppercase;
+  display: block;
+  font-size: 16.875px;
+  line-height: 16.875px;
+  max-width: 52.5px;
+}
+
+.bubble-change {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgb(95, 197, 120);
+}
+
+
+.highcharts-figure {
+min-width: 320px;
+max-width:100%;
+overflow:hidden;
+}
+
