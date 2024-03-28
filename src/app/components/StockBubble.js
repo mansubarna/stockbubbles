@@ -3,7 +3,9 @@
 import React from 'react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-require("highcharts/highcharts-more")(Highcharts);
+// require("highcharts/highcharts-more")(Highcharts);
+import HCMore from 'highcharts/highcharts-more';
+HCMore(Highcharts);
 
 function StockBubble() {
   const data = [
